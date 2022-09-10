@@ -14,6 +14,10 @@ export default function Navbar(props) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {props.title}
           </Typography>
+          <ul>
+            <li>
+            </li>
+          </ul>
         </Toolbar>
       </AppBar>
     </Box>
