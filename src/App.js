@@ -1,18 +1,16 @@
 import Navbar from "./components/Navbar";
-// import Listings from './components/Listings'
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router";
 
 import "./App.css";
-// import PizzaListing from "./components/PizzaListing";
-// import CoffeeListing from "./components/CoffeeListing";
-import Login from './components/Login'
 
 function App() {
   return (
     <div className="App">
-    
-      <Navbar title="Austin Small Business" />
-      {/* <Listings /> */}
-      <Login />
+      <BrowserRouter>
+        <Navbar title="Austin Small Business" />
+        <Router />
+      </BrowserRouter>
     </div>
   );
 }

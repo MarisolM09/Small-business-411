@@ -17,3 +17,17 @@ form {
     margin-left: 600px;
     margin-top: 30px;
 }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav-list-item {
+    margin: auto 15px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+

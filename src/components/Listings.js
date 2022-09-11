@@ -3,6 +3,8 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
+import { Link } from "react-router-dom";
+
 
 export default function Listings() {
   return (
@@ -19,7 +21,7 @@ export default function Listings() {
           <TableRow>
             <TableCell component="th" scope="row"></TableCell>
             <TableCell sx={{ textDecoration: "underline" }} align="left">
-              Home Slice Pizza
+            <Link to="/pizzalisting">Home Slice Pizza</Link>
             </TableCell>
             <TableCell align="left">
               Home Slice Pizza is an independent neighborhood pizza joint
@@ -35,7 +37,7 @@ export default function Listings() {
           <TableRow>
             <TableCell component="th" scope="row"></TableCell>
             <TableCell sx={{ textDecoration: "underline" }} align="left">
-              Jo's Coffee
+            <Link to="/coffeelisting">Jo's Coffee</Link>
             </TableCell>
             <TableCell align="left">
               Stumptown coffee, baked goods and sandwiches in colorful digs with
