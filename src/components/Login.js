@@ -24,6 +24,8 @@ export default function Login(props) {
           label="Username"
           defaultValue=""
           variant="standard"
+          style ={{width: '490px'}}
+          
         />
         <TextField
           required
@@ -32,7 +34,7 @@ export default function Login(props) {
           type="password"
           defaultValue=""
           variant="standard"
-          
+          style ={{width: '490px'}}
         />
       </Box>
       <Button variant="contained" sx={{ color: 'black', backgroundColor: '#e0e0e0'}}>Login</Button>
