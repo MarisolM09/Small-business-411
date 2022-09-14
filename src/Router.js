@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Listings from "./components/Listings";
 import Login from "./components/Login";
 import PizzaListing from "./components/PizzaListing";
-import CoffeeListing from "./components/CoffeeListing"
+import CoffeeListing from "./components/CoffeeListing";
+import AddListing from "./components/AddListing"
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/pizzalisting" element={<PizzaListing />}></Route>
       <Route path="/coffeelisting" element={<CoffeeListing />}></Route>
+      <Route path="/addlisting" element={<AddListing />}></Route>
     </Routes>
   );
 };

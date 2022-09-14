@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const linkStyle = {
   textDecoration: "none",
-  color: 'white'
+  color: "white",
 };
 
 export default function Navbar(props) {
@@ -20,10 +20,20 @@ export default function Navbar(props) {
           </Typography>
           <ul className="nav-list">
             <li className="nav-list-item">
-              <Link to="/" style={linkStyle}>Listings</Link>
+              <Link to="/" style={linkStyle}>
+                Listings
+              </Link>
+            </li>
+
+            <li className="nav-list-item">
+              <Link to="/login" style={linkStyle}>
+                Login
+              </Link>
             </li>
             <li className="nav-list-item">
-              <Link to="/login" style={linkStyle}>Login</Link>
+              <Link to="/addlisting" style={linkStyle}>
+                Add
+              </Link>
             </li>
           </ul>
         </Toolbar>
