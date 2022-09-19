@@ -31,6 +31,11 @@ export default function Navbar(props) {
               </Link>
             </li>
             <li className="nav-list-item">
+              <Link to="/protectedlisting" style={linkStyle}>
+                Listing
+              </Link>
+            </li>
+            <li className="nav-list-item">
               <Link to="/addlisting" style={linkStyle}>
                 Add
               </Link>
