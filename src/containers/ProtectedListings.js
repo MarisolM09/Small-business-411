@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ProtectedListings from "../components/ProtectedListings";
-import { removeListing } from "../redux/action";
+import { removeListing } from "../redux/actions";
 
 const mapStateToProps = (state) => {
   return {

@@ -8,6 +8,12 @@ import Grid from "@mui/material/Grid";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 export default function ProtectedListings(props) {
+
+  const handleClick = (index) => {
+    props.removeListing(index);
+  };
+
+
   return (
     <div className="listings">
       <Table width={400}>
@@ -22,23 +28,26 @@ export default function ProtectedListings(props) {
           </TableRow>
         </TableHead>
         <TableBody>
+          {props.listings.map((row, index) => (
           <TableRow 
+                key={row.id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
           >
             <TableCell component="th" scope="row"></TableCell>
             <TableCell
               sx={{ textDecoration: "underline" }}
               align="left"
-            ></TableCell>
-            <TableCell align="left"></TableCell>
-            <TableCell align="right"></TableCell>
-            <TableCell align="left"></TableCell>
+            >{row.name}</TableCell>
+            <TableCell align="left">{row.description}</TableCell>
+            <TableCell align="right">{row.hours}</TableCell>
+            <TableCell align="left">{row.address}</TableCell>
             <TableCell align="right">
               <Grid style={{ color: "red", cursor: "pointer" }} item xs={8}>
-                <DeleteForeverIcon />
+                <DeleteForeverIcon onClick={() => handleClick(index)} />
               </Grid>
             </TableCell>
           </TableRow>
-       
+          ))}
         </TableBody>
       </Table>
     </div>

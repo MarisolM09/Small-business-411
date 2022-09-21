@@ -11,3 +11,17 @@ export const addListing = (listing) => {
       value: index,
     };
   };
+
+  export const logInUser = (isLogged) => {
+    return {
+      type: "LOG_USER",
+      value: isLogged,
+    };
+  };
+  
+  export const logOutUser = (isLogged) => {
+    return {
+      type: "LOGOUT_USER",
+      value: isLogged,
+    };
+  };

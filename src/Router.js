@@ -1,23 +1,23 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import cookie from 'cookie';
+import { Routes, Route } from "react-router-dom";
+// import cookie from 'cookie';
 import Listings from "./components/Listings";
 import Login from "./components/Login";
 import PizzaListing from "./components/PizzaListing";
 import CoffeeListing from "./components/CoffeeListing";
-import AddListing from "./components/AddListing"
-import ProtectedListings from "./components/ProtectedListings";
+import AddListing from "./containers/AddListing"
+import ProtectedListings from "./containers/ProtectedListings";
 
-const checkAuth = () => {
-  const cookies = cookie.parse(document.cookie)
-  return cookies["loggedIn"] ? true : false
-}
+// const checkAuth = () => {
+//   const cookies = cookie.parse(document.cookie)
+//   return cookies["loggedIn"] ? true : false
+// }
 
-const ProtectedRoute = (props) => {
-  const { component : Component } = props;
+// const ProtectedRoute = (props) => {
+//   const { component : Component } = props;
 
-  return checkAuth() === true ? <Component /> : <Navigate to="/login" />
-}
+//   return checkAuth() === true ? <Component /> : <Navigate to="/login" />
+// }
 
 const Router = () => {
   return (
