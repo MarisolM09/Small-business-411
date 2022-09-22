@@ -16,6 +16,7 @@ export default function ProtectedListings(props) {
 
   return (
     <div className="listings">
+      <h2>Welcome, {props.user.username}</h2>
       <Table width={400}>
         <TableHead>
           <TableRow>

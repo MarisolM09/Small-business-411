@@ -3,14 +3,17 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "white",
-};
+import { Link, useNavigate } from "react-router-dom";
+import cookie from "cookie";
 
 export default function Navbar(props) {
+  const linkStyle = {
+    textDecoration: "none",
+    color: "white",
+  };
+
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ backgroundColor: "#66bb6a" }}>
@@ -40,6 +43,17 @@ export default function Navbar(props) {
                 Add
               </Link>
             </li>
+            <li
+            className="nav-list-item"
+            onClick={() => {
+              document.cookie = cookie.serialize("loggedIn", null, {
+                maxAge: 0,
+              });
+              navigate("/login");
+            }}
+          >
+            Logout
+          </li>
           </ul>
         </Toolbar>
       </AppBar>
